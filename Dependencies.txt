@@ -1,0 +1,4 @@
+Dependencies:
+
+pip install django 4,
+pip install django-crispy-forms
