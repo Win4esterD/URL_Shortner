@@ -1,0 +1,8 @@
+SELECT client_number, SUM(outcome = "win") AS Побед, SUM(outcome = "lose") AS Поражений
+FROM bid JOIN event_entity ON bid.play_id = event_entity.play_id JOIN event_value ON event_entity.play_id = event_value.play_id
+GROUP BY client_number;
+
+
+SELECT MAX(CONCAT(home_team,'-',away_team)) as game, COUNT(home_team + away_team) AS games_count
+FROM event_entity
+GROUP BY least(home_team, away_team), greatest(home_team, away_team);

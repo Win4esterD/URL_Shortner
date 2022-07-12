@@ -1,0 +1,44 @@
+{% block content %}      
+<style>
+	body {
+	  padding-left: 30%;
+	  background-color: #d1cfcf;
+	}
+
+	li {
+      display: inline;
+      margin-right: 30px;
+    }
+
+    button {
+      cursor: pointer;
+      transition: 1s;
+    }
+
+    button:hover {
+      transform: scale(1.2);
+    }
+
+</style>
+<header>
+    <ul>
+        <li><a href="logout">Выйти {{ user.username }}</a></li>
+        <li><a href="reg">Регистрация на сайте</a></li>
+        <li><a href="login">Авторизация</a></li>
+    </ul>
+</header>
+
+{% load crispy_forms_tags %}
+
+<!--Login--> 
+<div class="container py-5">
+  <h1>Введите имя пользователя и пароль</h1>
+  <form method="POST">
+    {% csrf_token %}
+    {{ login_form|crispy }}
+    <button class="btn btn-primary" type="submit">Login</button>
+  </form>
+  <p class="text-center">У Вас нет аккаунта? <a href="/register">Зарегистрируйтесь на сайте</a>.</p>
+</div>
+
+{% endblock %}
