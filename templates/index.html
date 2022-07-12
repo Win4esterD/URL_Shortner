@@ -39,9 +39,18 @@ header {
   display: flex;
 }
 
-li {
+.links {
   display: inline;
-  margin-right: 30px;
+  margin-right: 33px;
+  font-size: 19px;
+}
+
+a:link{
+  text-decoration: none!important;
+}
+
+.links:hover {
+  text-decoration: underline;
 }
 
 h1 {
@@ -99,11 +108,11 @@ section {
 </head>
 <header>
     <ul>
-        <li><a href="/">Вернуться</a></li>
-        <li><a href="reg">Регистрация на сайте</a></li>
-        <li><a href="login">Авторизация</a></li>
-        <li><a href="links">Ваши ссылки</a></li>
-        <li><a href="logout">Выйти {{ user.username }}</a></li>
+        <li class="links"><a href="/">Вернуться</a></li>
+        <li class="links"><a href="reg">Регистрация на сайте</a></li>
+        <li class="links"><a href="login">Авторизация</a></li>
+        <li class="links"><a href="links">Ваши ссылки</a></li>
+        <li class="links"><a href="logout">Выйти {{ user.username }}</a></li>
     </ul>
 </header>
 
