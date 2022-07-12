@@ -11,6 +11,20 @@
       margin-right: 30px;
     }
 
+    .links {
+      display: inline;
+      margin-right: 33px;
+      font-size: 19px;
+    }
+
+    a:link{
+        text-decoration: none!important;
+    }
+
+    .links:hover {
+        text-decoration: underline;
+    }
+
     button {
       cursor: pointer;
       transition: 1s;
@@ -26,7 +40,8 @@
         <li class="links"><a href="/">Вернуться</a></li>
         <li class="links"><a href="reg">Регистрация на сайте</a></li>
         <li class="links"><a href="login">Авторизация</a></li>
-		<li class="links"><a href="logout">Выйти {{ user.username }}</a></li>
+        <li class="links"><a href="links">Ваши ссылки</a></li>
+        <li class="links"><a href="logout">Выйти {{ user.username }}</a></li>
     </ul>
 </header>
 
