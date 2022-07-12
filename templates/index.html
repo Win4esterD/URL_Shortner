@@ -16,6 +16,7 @@ section {
 }
 
 body {
+  background-color: #d1cfcf;
   min-height: 100vh;
   font-family: "Lato", sans-serif;
   line-height: 1.5;
@@ -29,7 +30,7 @@ main {
   border-radius: 2.5px;
   box-shadow: 0 10px 20px rgba(17, 17, 17, 0.125),
     0 5px 5px rgba(17, 17, 17, 0.25);
-  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+  background-image: linear-gradient(to top, blue 0%, purple 100%);
 }
 
 header {
@@ -57,6 +58,16 @@ button {
   padding: 1rem;
 }
 
+button {
+  transition: 1s;
+}
+
+button:hover {
+  transform: scale(1.2)
+}
+
+
+
 input {
   box-sizing: border-box;
   width: 100%;
@@ -67,6 +78,8 @@ input {
 }
 
 button {
+  font-size: 24px;
+  padding-bottom: 1px;
   cursor: pointer;
   flex: 1;
   background-color: transparent;
@@ -98,7 +111,7 @@ section {
     {% csrf_token %}
   <input type="text" name="link" id="link" placeholder="Enter URL here">
   <div class="buttons">
-    <button type="submit" id="shorten">Shorten</button>
+    <button type="submit" id="shorten"><b>Сократить ссылку</b></button>
   </div>
   </form>
 

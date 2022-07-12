@@ -3,18 +3,29 @@
 <style>
 	body {
 	  padding-left: 30%;
+	  background-color: d1cfcf;
 	}
 
-	li {
+	.links {
       display: inline;
       margin-right: 30px;
     }
+
+    button {
+      cursor: pointer;
+      transition: 1s;
+    }
+
+    button:hover {
+      transform: scale(1.2);
+    }
+
 </style>
 <header>
     <ul>
-        <li><a href="logout">Выйти {{ user.username }}</a></li>
-        <li><a href="reg">Регистрация на сайте</a></li>
-        <li><a href="login">Авторизация</a></li>
+        <li class="links"><a href="logout">Выйти {{ user.username }}</a></li>
+        <li class="links"><a href="reg">Регистрация на сайте</a></li>
+        <li class="links"><a href="login">Авторизация</a></li>
     </ul>
 </header>
 
